@@ -1,0 +1,10 @@
+{
+    "window.zoomLevel": -2,
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.wordWrapColumn": 140,
+    "editor.minimap.maxColumn": 160,
+    "prettier.printWidth": 160,
+    "workbench.colorTheme": "Abyss"
+}
