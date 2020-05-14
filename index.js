@@ -42,5 +42,54 @@ app.post("/verify_ndt_data/300", (req, res) => {
   );
 });
 
+app.post("/calc_collapse/300", (req, res) => {
+  request.post(
+    {
+      url: urls + "/calc_collapse/300",
+      headers: { "content-type": "application/json" },
+      json: true,
+      body: req.body,
+    },
+    (error, response, body) => {
+      if (error || response.statusCode !== 200) {
+        return res.status(500).json({ type: "error", message: response.statusMessage });
+      }
+      res.json(body);
+    }
+  );
+});
+app.post("/rdpe_technical_values/30", (req, res) => {
+  request.post(
+    {
+      url: urls + "/rdpe_technical_values/30",
+      headers: { "content-type": "application/json" },
+      json: true,
+      body: req.body,
+    },
+    (error, response, body) => {
+      if (error || response.statusCode !== 200) {
+        return res.status(500).json({ type: "error", message: response.statusMessage });
+      }
+      res.json(body);
+    }
+  );
+});
+app.post("/calc_uncertainty_collapse/30000", (req, res) => {
+  request.post(
+    {
+      url: urls + "/calc_uncertainty_collapse/30000",
+      headers: { "content-type": "application/json" },
+      json: true,
+      body: req.body,
+    },
+    (error, response, body) => {
+      if (error || response.statusCode !== 200) {
+        return res.status(500).json({ type: "error", message: response.statusMessage });
+      }
+      res.json(body);
+    }
+  );
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
